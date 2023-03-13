@@ -1,0 +1,127 @@
+.flight-order {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 64px);
+  padding-top: 64px;
+}
+.small-heading {
+  color: #8f8f8f;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.order-info__text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin: 0;
+}
+
+.order-info {
+  min-width: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin: 0;
+}
+
+.page-heading {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 36px;
+  margin: 0;
+}
+
+.gray {
+  color: #adadad;
+}
+.black {
+  color: #000;
+}
+
+.email {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #8f8f8f;
+  margin-top: 0;
+}
+
+.flight-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.flight-info__airport {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-info__airport-date {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin: 0;
+}
+
+.flight-info__airport-info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #707070;
+  margin: 0;
+}
+
+.flight-info__airline {
+  border-left: 1px solid #ccc;
+  padding-left: 16px;
+  margin-left: 100px;
+}
+
+.flight-info__airline-type {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #adadad;
+  margin: 0;
+}
+
+.flight-info__airline-number {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin: 0;
+}
+
+.flight-info__pointer {
+  padding: 0 35px;
+}
+
+.flight-info__airline img {
+  width: 24px;
+}

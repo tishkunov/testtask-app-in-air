@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import Header from "./components/Header";
+import { Orders } from "./components/Orders";
+import "./fonts/sf_pro_display.OTF";
+import { redirect, Route, Routes } from "react-router";
+import { FlightOrderPage } from "./components/pages/FlightOrder";
+import { useEffect } from "react";
+import { HotelOrderPage } from "./components/pages/HotelOrder";
 
-function App() {
+const queryClient = new QueryClient();
+
+export const ROUTES = {
+  ORDERS: "/orders",
+  FLIGHT_ORDER: "/flight-order/:order_id",
+  HOTEL: "/hotel/:order_id",
+};
+
+// TODO: key
+
+export default function App() {
+  useEffect(() => {
+    redirect(ROUTES.ORDERS);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Header />
+
+      <Routes>
+        <Route path={ROUTES.ORDERS} element={<Orders />} />
+        <Route path={ROUTES.FLIGHT_ORDER} element={<FlightOrderPage />} />
+        <Route path={ROUTES.HOTEL} element={<HotelOrderPage />} />
+      </Routes>
+    </QueryClientProvider>
   );
 }
-
-export default App;
