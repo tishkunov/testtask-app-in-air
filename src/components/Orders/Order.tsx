@@ -43,6 +43,7 @@ export const Order: FC<IProps> = ({ order }) => {
     <>
       {order.flights?.map((flight: IFlight) => (
         <div
+          key={flight.aita_order.order_id}
           className="order"
           onClick={handleClickFlightOrder(flight.aita_order.order_id)}
         >
@@ -82,6 +83,7 @@ export const Order: FC<IProps> = ({ order }) => {
       ))}
       {order.hotels?.map((hotel) => (
         <div
+          key={hotel.aita_order.order_id}
           className="order"
           onClick={handleClickHotelOrder(hotel.aita_order.order_id)}
         >

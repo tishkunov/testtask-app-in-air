@@ -73,6 +73,7 @@ export type IProps = {
 };
 
 export interface IOrder {
+  id: string;
   arrival: number;
   departure: number;
   flights: IFlight[];

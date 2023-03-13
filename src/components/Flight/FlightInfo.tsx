@@ -51,8 +51,8 @@ export const FlightInfo: FC<Props> = ({ segment }) => {
           {segment.carrier} {segment.number}
         </p>
         <p className="flight-info__airline-type">
-          {segment.equipment.code}
-          {segment.equipment.name}
+          {segment.equipment?.code}
+          {segment.equipment?.name}
         </p>
       </div>
     </div>
